@@ -13,15 +13,12 @@ public class CategoriesPage {
         CategoriesPage.driver = driver;
         List<WebElement> getItems = driver.findElements(By.xpath("//h2[@class='product-title']"));
         for (WebElement product : getItems) {
-            // Get the product title
             WebElement titleElement = product.findElement(By.tagName("a"));
             String title = titleElement.getText();
-
-            // Check if the title contains "Lenovo"
             if (title.contains("Lenovo")) {
-                // Click on the Lenovo product
+                Thread.sleep(2000);
                 titleElement.click();
-                break; // Exit the loop since Lenovo product is found
+                break;
             }
             Thread.sleep(3000);
         }

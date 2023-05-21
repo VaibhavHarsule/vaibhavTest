@@ -11,7 +11,6 @@ import java.util.HashMap;
 
 public class Automation {
     public static WebDriver driver;
-//    public static void main(String args[]) throws IOException, InterruptedException {
     @BeforeTest
     public static void preSetUp()
     {

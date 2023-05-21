@@ -24,13 +24,13 @@ public class HomePage {
         CloseableHttpResponse response = client.execute(request);
         System.out.println(response.getCode());
         Assert.assertEquals(response.getCode(),200);
-        /* For valid images, the HttpStatus will be 200 */
+
     }
     public static void selectItem(WebDriver driver, String option) throws IOException, InterruptedException {
         WebElement elementToHover = driver.findElement(By.xpath("//a[@href and contains(text(),'Computers')][1]"));
-        // Create an instance of Actions class
+
         Actions actions = new Actions(driver);
-        // Perform the hover action
+
         actions.moveToElement(elementToHover).perform();
         Thread.sleep(3000);
         List<WebElement> dropdownElement = driver.findElements(By.xpath("(//div[@class='sublist-toggle'])[1]/following::ul[1]//li"));

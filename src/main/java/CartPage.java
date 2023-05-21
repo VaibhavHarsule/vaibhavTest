@@ -77,7 +77,7 @@ public static WebElement getElement (WebDriver driver, String idValue)
             String value = getAddress.get("CountryId").toString();
             Select select = new Select(getElement(driver,"CountryId"));
             select.selectByVisibleText(value);
-            Thread.sleep(2000);
+            Thread.sleep(5000);
         }
         if(getAddress.containsKey("StateProvinceId"))
         {
